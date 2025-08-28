@@ -1,0 +1,86 @@
+/* General layout */
+.app-container {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Panels */
+.panel {
+  background: white;
+  border-radius: 12px;
+  padding: 12px 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  font-size: 14px;
+}
+
+.stats-panel {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  width: 200px;
+}
+
+.filters-panel {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  width: 200px;
+}
+
+/* Buttons */
+.button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.button.light {
+  background: #ddd;
+  color: black;
+}
+
+.button.dark {
+  background: #444;
+  color: white;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+/* Loading/Error */
+.loading, .error {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: yellow;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+.error {
+  background: red;
+  color: white;
+}
+
+/* Dark Mode */
+body.dark {
+  background: #121212;
+  color: white;
+}
+
+body.dark .panel {
+  background: #1e1e1e;
+  color: white;
+}
