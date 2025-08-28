@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export default function useEarthquakeData(url) {
+function useEarthquakeData(url) {
   const [earthquakes, setEarthquakes] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -8,12 +8,12 @@ export default function useEarthquakeData(url) {
   useEffect(() => {
     setLoading(true);
     fetch(url)
-      .then(res => res.json())
-      .then(data => {
+      .then((res) => res.json())
+      .then((data) => {
         setEarthquakes(data.features || []);
         setLoading(false);
       })
-      .catch(err => {
+      .catch((err) => {
         setError(err.message);
         setLoading(false);
       });
@@ -21,3 +21,5 @@ export default function useEarthquakeData(url) {
 
   return { earthquakes, loading, error };
 }
+
+export default useEarthquakeData;
