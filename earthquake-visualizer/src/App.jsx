@@ -1,9 +1,8 @@
 import React from 'react'
-import './App.css'
 
 function App() {
   return (
-    <div>this is main page..!</div>
+    <div>this is app.jsx</div>
   )
 }
 
